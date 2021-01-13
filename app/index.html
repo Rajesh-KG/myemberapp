@@ -8,18 +8,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
-
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/booksdemo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     {{content-for "head-footer"}}
   </head>
   <body>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    
+    
+                                      <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    
+    <script>
+         // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyD2DXiGJF8qcq5ruU6SQmiCv_x8cDVZpUg",
+        authDomain: "ember-app-44b38.firebaseapp.com",
+        projectId: "ember-app-44b38",
+        storageBucket: "ember-app-44b38.appspot.com",
+        messagingSenderId: "470300487406",
+        appId: "1:470300487406:web:c45fbaf5cbbbfa898ecdff"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      window.fbInstance = firebase.database();
+      window.sample = "test";
+       var database = firebase.database();
+      
+      
+      
+    </script> 
+    
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/booksdemo.js"></script>
-
+ 
+   </script>
     {{content-for "body-footer"}}
   </body>
 </html>

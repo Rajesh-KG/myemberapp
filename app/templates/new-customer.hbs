@@ -1,0 +1,62 @@
+
+<form style="width: 500px; margin:auto">
+   
+
+    <div class="form-group">
+        
+        <label for="customerName" class="form-label">Name</label>
+        {{input class = "form-control" value=this.model.customerName}}
+        
+    </div>
+
+    <div class="form-group">
+        
+        <label for="companyName" class="form-label">Company Name</label>
+        {{input class = "form-control" id="companyName"  value=this.model.companyName }}
+
+    </div>
+
+    <div class="form-group">
+        
+        <label for="customerId" class="form-label">Customer Id</label>
+        {{input class = "form-control" id="customerId"  value=this.model.customerId}}
+        
+    </div>
+
+    <div class="form-group">
+        
+        <label for="customerPhone" class="form-label">Phone</label>
+        {{input class = "form-control" id="customerPhone"  value=this.model.customerPhone}}
+
+    </div>
+
+     <div class="form-group">
+        
+        <label for="customerEmail" class="form-label">Email</label>
+        {{input class = "form-control" id="customerEmail"  value=this.model.customerEmail}}
+
+    </div>
+
+    <div class="form-group">
+        
+        <label for="customerAddress" class="form-label">Address</label>
+        {{input class = "form-control" id="customerAddress"  value=this.model.customerAddress}}
+        
+    </div>
+
+    <div class="form-group">
+        
+        <label for="customerPin" class="form-label">Postal Code</label>
+        {{input class = "form-control" id="customerPin"  value=this.model.customerPin}}
+        
+    </div>
+
+    <div class="form-check form-group">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">Accept Terms and Condition</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary" {{action "insertData"}}>Submit</button>
+</form>
+
+{{outlet}}

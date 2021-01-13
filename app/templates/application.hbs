@@ -1,5 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
 
+<h1 class="display-6">Zoho Books</h1>
+
+<ul class="nav navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <li class="nav-item nav-link">
+        {{#link-to "application"}}Home{{/link-to}}
+    </li>
+     <li class="nav-item nav-link">
+        {{#link-to "customers"}}Customers{{/link-to}}
+    </li>
+</ul>
+
+<h4>Hello</h4>
 {{outlet}}

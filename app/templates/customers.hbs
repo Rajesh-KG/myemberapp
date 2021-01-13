@@ -1,0 +1,29 @@
+<div id="customers-content" style="width:100%">
+
+    <h3>All Customers</h3>
+    <button style = "float :right"class="btn btn-primary" {{action "gotonewcustomer"}}>+ New </button>
+
+    <table class="table">  
+        <th scope="col">Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">ID</th>
+        <tbody class="table-hover">
+            
+            {{#each-in this.model as |customername customer|}}
+            <tr {{action "listCustomerDetails" customer.customerName}}>
+        
+                    <td>{{customer.customerName}}</td>
+                    <td>{{customer.customerPhone}}</td>
+                    <td>{{customer.customerEmail}}</td>
+                    <td>{{customer.customerId}}</td>
+            </tr>
+            {{/each-in}}
+
+        </tbody>
+   
+    </table>
+
+</div>
+
+{{outlet}}
